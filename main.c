@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
     printf("Just read %zu items.\n", ret);
     printf("size of first: %zu\n", sizeof(data[0]));
 
-    size_t i, j = 0;
+    size_t i = 0, j = 0;
     // arr_pos
     printf("%-10zu", i);
     for (; i < fileSize; i++) {
@@ -104,6 +104,7 @@ int main(int argc, char *argv[]) {
 
     // ret = fwrite(data, sizeof(int), count, stdout);
 
+    free(data);
     fclose(fp);
     return 0;
 }
